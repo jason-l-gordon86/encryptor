@@ -25,6 +25,7 @@ class Encryptor
     #3. Join the results into a string
     results.join
   end
+
   def decrypt_letter(letter, rotation)
     decipher_for_rotation = decipher(rotation)
     decipher_for_rotation[letter]
@@ -37,11 +38,4 @@ class Encryptor
     end
     results.join
   end
-
-  def encrypt_file(filename, rotation)
-    input = File.open(filename, "r")
-    input.read
-
-  end
-
 end
